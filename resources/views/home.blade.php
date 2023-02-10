@@ -34,18 +34,21 @@
             <div class="row">
                 @forelse ($trains as $train)
                     <div class="col-3">
-                        <h3>
-                            {{ $train->codice_treno }}
-                        </h3>
-                        <h4>
-                            {{ $train->stazione_di_partenza }}
-                        </h4>
+                        <p>
+                            Codice del treno: {{ $train->codice_treno }}
+                        </p>
                         <h5>
-                            {{ $train->orario_di_partenza }}
+                            Stazione di partenza: {{ $train->stazione_di_partenza }}
                         </h5>
-                        <h6>
-                            {{ $train->azienda }}
-                        </h6>
+                        <h5>
+                            Stazione di arrivo: {{ $train->stazione_di_arrivo }}
+                        </h5>
+                        <h5>
+                            Orario di partenza: {{ $train->orario_di_partenza }}
+                        </h5>
+                        <p>
+                            Azienda: {{ $train->azienda }}
+                        </p>
                     </div>
                 @empty
                     <p>Non ci sono treni da mostrare</p>
